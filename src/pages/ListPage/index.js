@@ -28,10 +28,8 @@ const ListPage = () => {
 
     const handleChangeStatus = async (event, readingName, status) => {
         setLoading(true)
-        const update = await updateStatus(readingName, status)
-        if (update) {
-            fetchData()
-        }
+        await updateStatus(readingName, status)
+        fetchData()
         setLoading(false)
     }
 

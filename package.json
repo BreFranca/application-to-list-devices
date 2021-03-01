@@ -9,11 +9,6 @@
 		"start:api": "node api-server.js",
 		"test": "jest"
 	},
-	"babel": {
-		"presets": [
-			"@babel/preset-react"
-		]
-	},
 	"license": "ISC",
 	"dependencies": {
 		"@babel/runtime": "^7.13.8",

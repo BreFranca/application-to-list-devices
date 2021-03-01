@@ -12,7 +12,7 @@
     height: 0;
 }
 
-.slider {
+.switch .slider {
     position: absolute;
     cursor: pointer;
     top: 0;
@@ -25,7 +25,7 @@
     border-radius: 34px;
 }
 
-.slider:before {
+.switch .slider:before {
     position: absolute;
     content: "";
     height: 10px;
@@ -38,21 +38,21 @@
     border-radius: 50%;
 }
 
-input:checked+.slider {
+.switch.switch-active .slider {
     background-color: #007bff;
 }
 
-input:focus+.slider {
+.switch.switch-active .slider {
     box-shadow: 0 0 1px #007bff;
 }
 
-input:checked+.slider:before {
+.switch.switch-active .slider:before {
     -webkit-transform: translateX(11px);
     -ms-transform: translateX(11px);
     transform: translateX(11px);
 }
 
-.label {
+.switch .label {
     display: inline-block;
     font-size: 12px;
     margin-left: 30px;

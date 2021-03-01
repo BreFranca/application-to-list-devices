@@ -28,3 +28,7 @@
 .tabs li:hover {
     border-color: #dee2e6;
 }
+
+.tabs li.active:hover {
+    border-bottom: 1px solid #FFFFFF;
+}
