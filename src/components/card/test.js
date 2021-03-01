@@ -1,6 +1,9 @@
 import { shallow } from 'enzyme'
+import Adapter from 'enzyme-adapter-react-16'
 import Mock from './mock'
 import Card from './'
+
+Enzyme.configure ({adapter: new Adapter ()})
 
 describe('Card should:', () => {
   const { name, unit, date, value, active } = Mock

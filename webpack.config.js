@@ -23,6 +23,7 @@ module.exports = {
       {
         test: /\.(js|jsx)$/,
         loader: 'babel-loader',
+        exclude: join(__dirname, 'node_modules/'),
         options: {
           presets: [
             [
