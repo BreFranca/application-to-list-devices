@@ -1,0 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Switch should: match snapshot if: is disabled 1`] = `ShallowWrapper {}`;
+
+exports[`Switch should: match snapshot if: isDeactivate 1`] = `ShallowWrapper {}`;

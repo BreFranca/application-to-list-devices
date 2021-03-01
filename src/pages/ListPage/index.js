@@ -69,12 +69,12 @@ const ListPage = () => {
             />
             <Loader loading={loading}>
                 <div className="cards">
-                    {phones.map(({name, unit, date, value, active}, index) => (
+                    {phones.map(({name, unit, timestamp, value, active}, index) => (
                         <Card
                             key={index}
                             name={name}
                             unit={unit}
-                            date={moment(date).format('DD.MM.YYYY hh:mm:ss')}
+                            date={moment(timestamp).format('DD.MM.YYYY hh:mm:ss')}
                             value={value}
                             active={active}
                             onChange={event => handleChangeStatus(event, name, !active)}

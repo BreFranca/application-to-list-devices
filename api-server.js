@@ -1,13 +1,11 @@
 const restify = require('restify');
 const { plugins } = restify;
 const corsMiddleware = require('restify-cors-middleware');
-// const cors = require('cors')
 const ipAddress = '127.0.0.1';
 const port = '8888';
 const deviceReadings = require('./deviceReadings.js');
 
 const server = restify.createServer();
-// server.use(cors())
 server.use(plugins.queryParser());
 
 const cors = corsMiddleware({

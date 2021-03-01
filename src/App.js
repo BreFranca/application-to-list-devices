@@ -3,10 +3,7 @@ import ListPage from './pages/ListPage'
 import './globals.css'
 
 const App = () => {
-
-    return (
-        <ListPage />
-    )
+    return (<ListPage />)
 }
 
 export default App
