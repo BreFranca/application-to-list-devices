@@ -1,0 +1,27 @@
+.card {
+    padding: 15px 20px 15px 15px;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, .1);
+    max-width: 215px;
+    min-width: 215px;
+    margin: 8px;
+    border: 1px solid rgba(0, 0, 0, .1);
+}
+
+.card-name {
+    font-weight: 500;
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+.card-infos li {
+    font-size: 14px;
+    display: block;
+}
+
+.card-infos li + li {
+    margin-top: 3px;
+}
+
+.card-infos li strong {
+    font-weight: 500;
+}

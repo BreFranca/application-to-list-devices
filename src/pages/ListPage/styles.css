@@ -1,0 +1,20 @@
+.layout {
+    padding: 0 40px;    
+}
+
+.instructions {
+    border: 2px solid #202936;
+    border-radius: 30px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+    width: 500px;
+    margin-bottom: 50px;
+    margin-top: 50px;
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -10px;
+}

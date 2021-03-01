@@ -1,0 +1,30 @@
+.tabs {
+    display: flex;
+    border-bottom: 1px solid #dee2e6;
+    margin-bottom: 50px;
+}
+
+.tabs li {
+    display: block;
+    padding: 15px 18px;
+    font-weight: 300;
+    font-size: 14px;
+    border: 1px solid #FFFFFF;
+    border-bottom: #dee2e6;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    margin-bottom: -1px;
+    color: #007bff;
+    cursor: pointer;
+    transition: .4s all linear;
+}
+
+.tabs li.active {
+    color: #495057;
+    border-color: #dee2e6;
+    border-bottom: 1px solid #FFFFFF;
+}
+
+.tabs li:hover {
+    border-color: #dee2e6;
+}

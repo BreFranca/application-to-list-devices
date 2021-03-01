@@ -1,36 +1,56 @@
-const webpack = require('webpack');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
+const HTMLWebpackPlugin = require('html-webpack-plugin');
+const { join } = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const { HotModuleReplacementPlugin } = require('webpack');
+
+const mode = process.env.ENV || 'development';
 
 module.exports = {
-  entry: {
-    app: ['react-hot-loader/patch', './src/index.js'],
-  },
+  mode,
+  entry: join(__dirname, '/index.js'),
   output: {
-    publicPath: '/',
-    filename: 'js/[name].js',
+    path: join(__dirname, 'build'),
+    filename: 'index.bundled.js'
   },
-  plugins: [
-    new webpack.HotModuleReplacementPlugin(),
-    new HtmlWebpackPlugin({
-      template: './index.html',
-      inject: 'body',
-    }),
-    new MiniCssExtractPlugin(),
-  ],
+  devServer: {
+    port: 8080,
+    hot: true,
+    open: true,
+    historyApiFallback: true
+  },
   module: {
     rules: [
       {
-        test: /\.js$/,
-        exclude: /node_modules/,
-        use: {
-          loader: 'babel-loader',
-        },
+        test: /\.(js|jsx)$/,
+        loader: 'babel-loader',
+        options: {
+          presets: [
+            [
+              '@babel/preset-env',
+              {
+                "targets": {
+                  "node": "10"
+                }
+              }
+            ],
+            '@babel/preset-react'
+          ]
+        }
       },
       {
         test: /\.css$/,
         use: [MiniCssExtractPlugin.loader, 'css-loader'],
       },
-    ],
+    ]
   },
-};
+  plugins: [
+    new HotModuleReplacementPlugin(),
+    new MiniCssExtractPlugin(),
+    new HTMLWebpackPlugin({
+      favicon: false,
+      showErrors: true,
+      cache: true,
+      template: join(__dirname, 'index.html')
+    })
+  ]
+}
