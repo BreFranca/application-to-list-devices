@@ -14,7 +14,8 @@
 		"@babel/runtime": "^7.13.8",
 		"moment": "^2.29.1",
 		"react": "^16.8.6",
-		"react-dom": "^16.8.6"
+		"react-dom": "^16.8.6",
+		"react-notifications-component": "^3.0.3"
 	},
 	"jest": {
 		"verbose": true

@@ -2,7 +2,6 @@ const HTMLWebpackPlugin = require('html-webpack-plugin');
 const { join } = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const { HotModuleReplacementPlugin } = require('webpack');
-
 const mode = process.env.ENV || 'development';
 
 module.exports = {
