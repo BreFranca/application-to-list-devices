@@ -42,7 +42,7 @@ export const updateStatus = async (readingName, active) => {
             store.addNotification({
                 title: "Erro!",
                 message: "Não foi possível atualizado o Status",
-                type: "error",
+                type: "danger",
                 insert: "top",
                 container: "top-right",
                 animationIn: ["animate__animated", "animate__fadeIn"],
